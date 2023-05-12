@@ -5,8 +5,10 @@ import requests
 import threading
 
 intents = discord.Intents.default()
-intents.typing = False
-intents.presences = False
+
+intents.message_content = True
+
+client = discord.Client(intents=intents)
 
 bot = commands.Bot(command_prefix='!')
 
