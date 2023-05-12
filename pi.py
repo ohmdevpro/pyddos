@@ -4,6 +4,10 @@ import re
 import requests
 import threading
 
+intents = discord.Intents.default()
+intents.typing = False
+intents.presences = False
+
 bot = commands.Bot(command_prefix='!')
 
 @bot.event
